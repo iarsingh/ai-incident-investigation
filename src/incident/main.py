@@ -1,9 +1,11 @@
+from incident.ops import router as ops_router
 from fastapi import FastAPI
 from pydantic import BaseModel
 
 from incident.investigate import investigate
 
 app = FastAPI(title="Incident investigation")
+app.include_router(ops_router, prefix="/v1")
 
 
 class Snapshot(BaseModel):
