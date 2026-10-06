@@ -20,3 +20,8 @@ def create(body: Snapshot):
     found = investigate(body.model_dump())
     found["service"] = body.service
     return found
+
+
+@app.get("/healthz")
+def healthz():
+    return {"status": "ok"}
