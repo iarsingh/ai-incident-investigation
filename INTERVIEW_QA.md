@@ -77,13 +77,13 @@ This is a concrete regression example from the repository. Its assertions establ
 ## 6. What HTTP interface does the code expose?
 
 - `POST /investigations` → `create` in [`src/incident/main.py`](src/incident/main.py#L19).
-- `GET /readyz` → `readyz` in [`src/incident/ops.py`](src/incident/ops.py#L44).
-- `POST /workspaces` → `create_workspace` in [`src/incident/ops.py`](src/incident/ops.py#L49).
-- `GET /workspaces` → `list_workspaces` in [`src/incident/ops.py`](src/incident/ops.py#L66).
-- `POST /workspaces/{workspace_id}/jobs` → `create_job` in [`src/incident/ops.py`](src/incident/ops.py#L73).
-- `GET /jobs/{job_id}` → `get_job` in [`src/incident/ops.py`](src/incident/ops.py#L96).
-- `POST /jobs/{job_id}/approve` → `approve_job` in [`src/incident/ops.py`](src/incident/ops.py#L105).
-- `GET /audit` → `audit` in [`src/incident/ops.py`](src/incident/ops.py#L122).
+- `GET /readyz` → `readyz` in [`src/incident/ops.py`](src/incident/ops.py#L74).
+- `POST /workspaces` → `create_workspace` in [`src/incident/ops.py`](src/incident/ops.py#L80).
+- `GET /workspaces` → `list_workspaces` in [`src/incident/ops.py`](src/incident/ops.py#L98).
+- `POST /workspaces/{workspace_id}/jobs` → `create_job` in [`src/incident/ops.py`](src/incident/ops.py#L106).
+- `GET /jobs/{job_id}` → `get_job` in [`src/incident/ops.py`](src/incident/ops.py#L130).
+- `POST /jobs/{job_id}/approve` → `approve_job` in [`src/incident/ops.py`](src/incident/ops.py#L140).
+- `GET /audit` → `audit` in [`src/incident/ops.py`](src/incident/ops.py#L160).
 
 These are literal decorators. Application/router prefixes, authentication, and middleware must be checked in the corresponding setup code.
 
